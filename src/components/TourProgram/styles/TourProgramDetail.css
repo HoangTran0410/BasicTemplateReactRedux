@@ -1,0 +1,12 @@
+.detail-tour-program__title > h1 {
+    font-size: 20px;
+}
+
+.detail-tour-program__title > h1 > p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.detail-tour-program__title > div > a{
+    margin-right: auto;
+}

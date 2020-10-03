@@ -7,6 +7,9 @@ import Modal from 'antd/lib/modal'
 import Table from 'antd/lib/table'
 import Spin from 'antd/lib/spin'
 import notification from 'antd/lib/notification'
+import Space from 'antd/lib/space';
+import Tabs from 'antd/lib/tabs';
+import Divider from 'antd/lib/divider';
 
 export {
     Layout,
@@ -18,4 +21,7 @@ export {
     Table,
     Spin,
     notification,
+    Space,
+    Tabs,
+    Divider,
 }

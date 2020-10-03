@@ -12,7 +12,8 @@ export default function TourProgramPage() {
     }, [dispatch])
     return (
         <div>
-            <TourProgramTable dataSource={tourProgram} />
+            <h3>Danh sách chương trình tour</h3>
+            <TourProgramTable dataSource={tourProgram}/>
         </div>
     )
 }
