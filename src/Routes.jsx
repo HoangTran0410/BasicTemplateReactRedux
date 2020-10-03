@@ -1,0 +1,50 @@
+import React from 'react'
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import AdminLayout from './layouts/AdminLayout'
+import {
+    LoginPage,
+    TourProgramPage,
+    UnderConstructionPage,
+    NotFoundPage,
+    DashBoardPage,
+} from './pages'
+
+export default function Routes() {
+    const isLogin = true
+    if (!isLogin) {
+        return (
+            <div className="bootstrap-wrapper">
+                <Router>
+                    <Switch>
+                        <Route exact path="/" render={LoginPage} />
+                        <Route path="*" render={NotFoundPage} />
+                    </Switch>
+                </Router>
+            </div>
+        )
+    } else {
+        return (
+            <div className="bootstrap-wrapper">
+                <Router>
+                    <AdminLayout>
+                        <Switch>
+                            <Route
+                                path="/admin/tour"
+                                exact
+                                component={TourProgramPage}
+                            />
+                            <Route path="/admin" exact render={DashBoardPage} />
+                            <Route
+                                path="/admin/*"
+                                render={UnderConstructionPage}
+                            />
+                            <Route path="*" render={NotFoundPage} />
+                        </Switch>
+                    </AdminLayout>
+                </Router>
+            </div>
+        )
+    }
+}

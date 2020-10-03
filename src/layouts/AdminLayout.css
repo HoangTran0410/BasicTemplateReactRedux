@@ -1,0 +1,36 @@
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+
+  text-align: center;
+  height: 64px;
+  line-height: 64px;
+  letter-spacing: 1.8px;
+}
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.site-layout .site-layout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-layout-header .avatar-logo {
+    margin-right: 18px;
+}
+
+.site-layout .site-layout-background {
+  background: white;
+}
