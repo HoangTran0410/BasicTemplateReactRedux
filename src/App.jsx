@@ -23,3 +23,4 @@ export default App
 // code them
 // code nua
 // code toi khi xong chuc nang
+// code chua tot, fix o day....
