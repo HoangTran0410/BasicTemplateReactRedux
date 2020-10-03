@@ -1,9 +1,9 @@
-import LoginPage from './LoginPage';
-import TourProgramPage from './TourProgramPage';
-import UnderConstructionPage from './UnderConstructionPage';
-import NotFoundPage from './NotFoundPage';
-import DashBoardPage from './DashBoardPage';
-import TourProgramDetailPage from './TourProgramDetailPage';
+import LoginPage from './LoginPage'
+import TourProgramPage from './TourProgramPage'
+import UnderConstructionPage from './UnderConstructionPage'
+import NotFoundPage from './NotFoundPage'
+import DashBoardPage from './DashBoardPage'
+import TourProgramDetailPage from './TourProgramDetailPage'
 
 export {
     LoginPage,
@@ -11,5 +11,5 @@ export {
     UnderConstructionPage,
     NotFoundPage,
     DashBoardPage,
-    TourProgramDetailPage
+    TourProgramDetailPage,
 }

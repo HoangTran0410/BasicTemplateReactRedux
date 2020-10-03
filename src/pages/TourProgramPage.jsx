@@ -13,7 +13,7 @@ export default function TourProgramPage() {
     return (
         <div>
             <h3>Danh sách chương trình tour</h3>
-            <TourProgramTable dataSource={tourProgram}/>
+            <TourProgramTable dataSource={tourProgram} />
         </div>
     )
 }
