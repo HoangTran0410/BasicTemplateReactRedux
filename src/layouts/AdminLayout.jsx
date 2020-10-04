@@ -3,7 +3,7 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
 
 import { Layout, Menu, Avatar, Dropdown } from '../libs/antd'
 import './AdminLayout.css'
-import { Link } from 'react-router-dom'
+import Sidebar from './Sidebar'
 
 const { Header, Sider, Content } = Layout
 
@@ -19,13 +19,7 @@ export default function AdminLayout({ children }) {
                 collapsed={collapsed}
             >
                 <div className="brand">Travel Tour</div>
-                <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-                    <Menu.Item key="1">Màn hình chính</Menu.Item>
-                    <Menu.Item key="2">
-                        <Link to="/admin/tourprogram">Quản lý Tour</Link>
-                    </Menu.Item>
-                    <Menu.Item key="3">Quản lý gì đó</Menu.Item>
-                </Menu>
+                <Sidebar />
             </Sider>
             <Layout className="site-layout">
                 <Header

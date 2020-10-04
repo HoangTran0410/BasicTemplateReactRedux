@@ -18,9 +18,3 @@ function App() {
 }
 
 export default App
-
-// gia su ong code them chuc nang o day
-// code them
-// code nua
-// code toi khi xong chuc nang
-// code chua tot, fix o day....
