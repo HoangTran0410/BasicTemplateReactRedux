@@ -3,69 +3,47 @@ import { FundProjectionScreenOutlined } from '@ant-design/icons'
 
 const SidebarConstant = [
     {
-        subMenu: 'Màn hình chính',
-        icon: <FundProjectionScreenOutlined />,
-        children: [
+        item: [
             {
-                itemGroup: 'Item Group 1',
-                key: 'itemg1',
-                item: [
-                    {
-                        title: 'Item 1',
-                        icon: <FundProjectionScreenOutlined />,
-                        to: '/admin/1',
-                    },
-                    {
-                        title: 'Item 1',
-                        icon: <FundProjectionScreenOutlined />,
-                        to: '/admin/2',
-                    },
-                ],
-            },
-            {
-                itemGroup: 'Item Group 1',
-                key: 'itemg2',
-                item: [
-                    {
-                        title: 'Item 1',
-                        icon: <FundProjectionScreenOutlined />,
-                        to: '/admin/3',
-                    },
-                    {
-                        title: 'Item 1',
-                        icon: <FundProjectionScreenOutlined />,
-                        to: '/admin/4',
-                    },
-                ],
+                title: 'Màn hình chính',
+                icon: <FundProjectionScreenOutlined />,
+                to: '/admin',
             },
         ],
     },
-    //Demo data
+    {
+        item: [
+            {
+                title: 'Loại hình du lịch',
+                // icon: <FundProjectionScreenOutlined />,
+                to: '/admin/tourtype',
+            },
+        ],
+    },
     {
         subMenu: 'Quản lý tour',
         icon: <FundProjectionScreenOutlined />,
         children: [
             {
-                itemGroup: 'Item Group 1',
                 item: [
                     {
-                        title: 'Item 1',
+                        title: 'Danh sách chương trình',
                         icon: <FundProjectionScreenOutlined />,
-                        to: '/admin/5',
+                        to: '/admin/tourprogram',
+                    },
+                    {
+                        title: 'Danh sách tour',
+                        icon: <FundProjectionScreenOutlined />,
+                        to: '/admin/tour',
                     },
                 ],
             },
         ],
     },
     {
-        itemGroup: 'Item Group 1',
-        item: [
-            {
-                title: 'Item 1',
-                icon: <FundProjectionScreenOutlined />,
-                to: '/admin/6',
-            },
-        ],
+        subMenu: 'Quản lý khách',
+        icon: <FundProjectionScreenOutlined />,
+        children: [],
     },
 ]
 
