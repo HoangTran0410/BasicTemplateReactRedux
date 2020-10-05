@@ -10,7 +10,7 @@ const { Header, Sider, Content } = Layout
 export default function AdminLayout({ children }) {
     const [collapsed, setCollapsed] = useState(false)
     return (
-        <Layout style={{ height: '100vh' }}>
+        <Layout style={{ minHeight: '100vh' }}>
             <Sider
                 trigger={null}
                 collapsedWidth={0}
@@ -54,7 +54,7 @@ export default function AdminLayout({ children }) {
                     style={{
                         margin: '24px 16px',
                         padding: 24,
-                        height: '100%',
+                        minHeight: '100%',
                     }}
                 >
                     {children}
