@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Table, Tabs, Divider } from '../../libs/antd'
 import { BarcodeOutlined } from '@ant-design/icons'
 import './styles/TourProgramDetail.css'
+import { formatDateToShortDate, formatNumberToPrice } from '../../utils/format'
 
 const { TabPane } = Tabs
 
@@ -21,6 +22,7 @@ export default function TourProgramDetail({ data }) {
         {
             title: 'Giá',
             dataIndex: 'price',
+            render: (value) => formatNumberToPrice(value),
         },
         {
             title: 'Số lượng tối đa',
@@ -29,6 +31,7 @@ export default function TourProgramDetail({ data }) {
         {
             title: 'Thời gian khỏi hành',
             dataIndex: 'dateStart',
+            render: (value) => formatDateToShortDate(value),
         },
     ]
     return (

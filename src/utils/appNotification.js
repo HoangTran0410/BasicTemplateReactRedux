@@ -7,7 +7,7 @@ export const showError = (error) => {
             description: 'Check your network',
         }
         notification.error({
-            message: error.message || data.message,
+            message: data.message || error.message,
             description: data.description,
         })
     }

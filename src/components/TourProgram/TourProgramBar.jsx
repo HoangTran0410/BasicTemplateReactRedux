@@ -7,10 +7,18 @@ export default function TourProgramBar() {
         global.Modal.open('Thêm chương trình tour', <TourProgramAddForm />)
     }
     return (
-        <div>
+        <div
+            style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                marginBottom: 10,
+            }}
+        >
             <h3>Danh sách chương trình tour</h3>
             <div>
-                <Button onClick={click}>click</Button>
+                <Button onClick={click} type="primary">
+                    Thêm
+                </Button>
             </div>
         </div>
     )

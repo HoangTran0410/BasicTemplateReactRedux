@@ -12,9 +12,9 @@ export default function TourProgramPage() {
         dispatch(fetchTourProgramsAction())
     }, [dispatch])
     return (
-        <div>
+        <>
             <TourProgramBar />
             <TourProgramTable dataSource={tourProgram} />
-        </div>
+        </>
     )
 }
