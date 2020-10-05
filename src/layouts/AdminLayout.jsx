@@ -3,29 +3,24 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
 
 import { Layout, Menu, Avatar, Dropdown } from '../libs/antd'
 import './AdminLayout.css'
-import { Link } from 'react-router-dom'
+import Sidebar from './Sidebar'
 
 const { Header, Sider, Content } = Layout
 
 export default function AdminLayout({ children }) {
     const [collapsed, setCollapsed] = useState(false)
     return (
-        <Layout>
+        <Layout style={{ height: '100vh' }}>
             <Sider
                 trigger={null}
                 collapsedWidth={0}
                 theme="dark"
                 collapsible
                 collapsed={collapsed}
+                width={250}
             >
                 <div className="brand">Travel Tour</div>
-                <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-                    <Menu.Item key="1">Màn hình chính</Menu.Item>
-                    <Menu.Item key="2">
-                        <Link to="/admin/tourprogram">Quản lý Tour</Link>
-                    </Menu.Item>
-                    <Menu.Item key="3">Quản lý gì đó</Menu.Item>
-                </Menu>
+                <Sidebar />
             </Sider>
             <Layout className="site-layout">
                 <Header
@@ -59,7 +54,7 @@ export default function AdminLayout({ children }) {
                     style={{
                         margin: '24px 16px',
                         padding: 24,
-                        minHeight: 280,
+                        height: '100%',
                     }}
                 >
                     {children}
