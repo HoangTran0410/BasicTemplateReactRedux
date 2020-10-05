@@ -1,6 +1,6 @@
 import axios from 'axios'
 import Qs from 'qs'
-import { showSuccess } from '../utils/appNotification'
+import { showError } from '../utils/appNotification'
 
 // Set config defaults when creating the instance
 const Axios = axios.create({
@@ -30,14 +30,13 @@ Axios.interceptors.response.use(
         // Any status code that lie within the range of 2xx cause this function to trigger
         // Do something with response data
         global.Loading.setLoading(false)
-        //Check notification
-        showSuccess('Thao tác dữ liệu thành công')
         return response.data
     },
     function (error) {
         // Any status codes that falls outside the range of 2xx cause this function to trigger
         // Do something with response error
         global.Loading.setLoading(false)
+        showError(error)
         return Promise.reject(error)
     }
 )
