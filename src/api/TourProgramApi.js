@@ -10,11 +10,6 @@ const TourProgramApi = {
         const response = await Axios.get(`tourprogram/${id}`)
         return response
     },
-
-    createTourProgram: async (body) => {
-        const response = await Axios.post(`tourprogram`, body)
-        return response
-    },
 }
 
 export default TourProgramApi

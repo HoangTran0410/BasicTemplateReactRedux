@@ -4,8 +4,6 @@ import UnderConstructionPage from './UnderConstructionPage'
 import NotFoundPage from './NotFoundPage'
 import DashBoardPage from './DashBoardPage'
 import TourProgramDetailPage from './TourProgramDetailPage'
-import PlacePage from './PlacePage'
-import TourTypePage from './TourTypePage'
 
 export {
     LoginPage,
@@ -14,6 +12,4 @@ export {
     NotFoundPage,
     DashBoardPage,
     TourProgramDetailPage,
-    PlacePage,
-    TourTypePage,
 }

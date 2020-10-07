@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchTourProgramsAction } from '../redux/TourProgram/action'
 import TourProgramTable from '../components/TourProgram/TourProgramTable'
-import TourProgramBar from '../components/TourProgram/TourProgramBar'
 
 export default function TourProgramPage() {
     const tourProgram = useSelector((state) => state.tourProgram)
@@ -12,9 +11,9 @@ export default function TourProgramPage() {
         dispatch(fetchTourProgramsAction())
     }, [dispatch])
     return (
-        <>
-            <TourProgramBar />
+        <div>
+            <h3>Danh sách chương trình tour</h3>
             <TourProgramTable dataSource={tourProgram} />
-        </>
+        </div>
     )
 }

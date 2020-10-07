@@ -1,16 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import { Table, Tabs, Divider, Steps } from '../../libs/antd'
+import { Table, Tabs, Divider } from '../../libs/antd'
 import { BarcodeOutlined } from '@ant-design/icons'
 import './styles/TourProgramDetail.css'
-import { formatDateToShortDate, formatNumberToPrice } from '../../utils/format'
 
 const { TabPane } = Tabs
-const { Step } = Steps
 
 export default function TourProgramDetail({ data }) {
-    console.log(data.tourPlaces)
+    console.log(data.tours)
     const columnsTour = [
         {
             title: 'STT',
@@ -23,7 +21,6 @@ export default function TourProgramDetail({ data }) {
         {
             title: 'Giá',
             dataIndex: 'price',
-            render: (value) => formatNumberToPrice(value),
         },
         {
             title: 'Số lượng tối đa',
@@ -32,7 +29,6 @@ export default function TourProgramDetail({ data }) {
         {
             title: 'Thời gian khỏi hành',
             dataIndex: 'dateStart',
-            render: (value) => formatDateToShortDate(value),
         },
     ]
     return (
@@ -76,16 +72,7 @@ export default function TourProgramDetail({ data }) {
                     />
                 </TabPane>
                 <TabPane tab="Hành trình tour" key="2">
-                    <Steps type="navigation" size="small" onChange>
-                        {data.tourPlaces &&
-                            data.tourPlaces
-                                .sort(
-                                    (a, b) => a.ordinalNumber - b.ordinalNumber
-                                )
-                                .map(({ placeName }) => (
-                                    <Step title={placeName} />
-                                ))}
-                    </Steps>
+                    Hành trình tour
                 </TabPane>
             </Tabs>
         </div>
