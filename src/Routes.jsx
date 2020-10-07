@@ -10,6 +10,8 @@ import {
     NotFoundPage,
     DashBoardPage,
     TourProgramDetailPage,
+    TourTypePage,
+    PlacePage,
 } from './pages'
 
 export default function Routes() {
@@ -40,6 +42,16 @@ export default function Routes() {
                                 path="/admin/tourprogram/:id"
                                 exact
                                 component={TourProgramDetailPage}
+                            />
+                            <Route
+                                path="/admin/tourtype"
+                                exact
+                                component={TourTypePage}
+                            />
+                            <Route
+                                path="/admin/place"
+                                exact
+                                component={PlacePage}
                             />
                             <Route path="/admin" exact render={DashBoardPage} />
                             <Route

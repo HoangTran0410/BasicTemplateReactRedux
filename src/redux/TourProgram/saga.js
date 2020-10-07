@@ -1,8 +1,8 @@
-import { call, put, all, takeLatest } from 'redux-saga/effects'
+import { call, put, all, takeLatest, takeEvery } from 'redux-saga/effects'
 
 import { fetchTourProgramsSuccess } from './action'
 import TourProgramApi from '../../api/TourProgramApi'
-import { FETCH_TOUR_PROGRAMS } from './constant'
+import { CREATE_TOUR_PROGRAMS, FETCH_TOUR_PROGRAMS } from './constant'
 
 function* fetchTourPrograms() {
     try {
@@ -13,6 +13,19 @@ function* fetchTourPrograms() {
     }
 }
 
+function* createTourProgram({ payload }) {
+    try {
+        yield call(TourProgramApi.createTourProgram, payload)
+        yield put({ type: FETCH_TOUR_PROGRAMS })
+        global.Modal.close()
+    } catch (error) {
+        console.log('error:', error.message)
+    }
+}
+
 export default function* tourProgramSaga() {
-    yield all([yield takeLatest(FETCH_TOUR_PROGRAMS, fetchTourPrograms)])
+    yield all([
+        yield takeLatest(FETCH_TOUR_PROGRAMS, fetchTourPrograms),
+        yield takeEvery(CREATE_TOUR_PROGRAMS, createTourProgram),
+    ])
 }
