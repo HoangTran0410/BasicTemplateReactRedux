@@ -15,8 +15,17 @@ const SidebarConstant = [
         item: [
             {
                 title: 'Loại hình du lịch',
-                // icon: <FundProjectionScreenOutlined />,
+                icon: <FundProjectionScreenOutlined />,
                 to: '/admin/tourtype',
+            },
+        ],
+    },
+    {
+        item: [
+            {
+                title: 'Địa điểm du lịch',
+                icon: <FundProjectionScreenOutlined />,
+                to: '/admin/place',
             },
         ],
     },
